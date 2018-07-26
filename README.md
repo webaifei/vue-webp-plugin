@@ -51,3 +51,8 @@ Vue.use(WebpPlugun);
 ```
 
 #### tips
+
+#### resources
+1. [A new image format for the Web](https://developers.google.com/speed/webp/)
+1. [Using WebP Images](https://css-tricks.com/using-webp-images/)
+2. [探究WebP一些事儿](https://aotu.io/notes/2016/06/23/explore-something-of-webp/index.html)

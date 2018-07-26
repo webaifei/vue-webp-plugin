@@ -22,6 +22,7 @@
       return false;
     }
   })();
+  const mimeTypes = ['.jpg', '.jpeg', '.png'];
 
   // 核心逻辑
   function update(el, binding) {
@@ -47,7 +48,8 @@
   function setImg(el, attr, originUrl, replace) {
     let webpUrl = originUrl;
     if (replace && canUseWebp) {
-      webpUrl = originUrl + ".webp";
+      const extReg = /\.\w{3,}$/ig;
+      webpUrl = originUrl.replace(extReg,  ".webp");
       onErrorLoadWebp(el, attr, webpUrl, originUrl);
     }
     if (attr === "bg") {
@@ -64,6 +66,13 @@
       setImg(el, attr, originUrl);
       img = null;
     };
+  }
+  /*
+  * 获取文件后缀
+  */
+  function getExtname(url) {
+    
+    const _extname = extReg.exec(url);
   }
 
   // 指令
