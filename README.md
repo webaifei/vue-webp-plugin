@@ -28,7 +28,7 @@ Vue.use(WebpPlugun);
 ```
 2. src方式使用本地图片
 ```
-<img v-webp="'static/home_top_bg.png'"/>
+<img v-webp="require('static/home_top_bg.png')"/>
 ```
 3. use an variable
 ```
@@ -38,7 +38,7 @@ Vue.use(WebpPlugun);
     export default {
         data() {
             return {
-                url: 'static/home_top_bg.png'
+                url: require('static/home_top_bg.png')
             }
         }
     }
@@ -47,10 +47,12 @@ Vue.use(WebpPlugun);
 
 4. background-image方式使用
 ```
-<div v-webp:bg="'static/home_top_bg.png'"></div>
+<div v-webp:bg="require('static/home_top_bg.png')"></div>
 ```
 
 #### tips
+1. 使用require引用图片资源， 这样，vue-loader可以处理它
+2. 我这边没有使用webpack对插件进行babel转码，请将本插件添加到babel-loader处理的文件序列中
 
 #### resources
 1. [A new image format for the Web](https://developers.google.com/speed/webp/)
