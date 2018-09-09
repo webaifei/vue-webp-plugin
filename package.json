@@ -1,6 +1,6 @@
 {
   "name": "vue-webp-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a directive of vuejs make it easily to use image of webp format.",
   "main": "index.js",
   "scripts": {
