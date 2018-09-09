@@ -3,7 +3,7 @@
 > make it easily to use webp format image, both src and backgrund-image support~
 
 #### TIPS
-1. 使用require引用图片资源， 这样，vue-loader可以处理它 👏
+1. 使用require引用图片资源， 这样,vue-loader可以处理它 👏
 2. 我这边没有使用webpack对插件进行babel转码，请将本插件添加到babel-loader处理的文件序列中 😢
 
 #### features
