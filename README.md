@@ -2,6 +2,10 @@
 
 > make it easily to use webp format image, both src and backgrund-image support~
 
+#### TIPS
+1. 使用require引用图片资源， 这样，vue-loader可以处理它 👏
+2. 我这边没有使用webpack对插件进行babel转码，请将本插件添加到babel-loader处理的文件序列中 😢
+
 #### features
     1. base64格式的图片资源自动忽略webp
     2. both support src and background-image(allways use this to support background-image in stylesheet)
@@ -50,9 +54,7 @@ Vue.use(WebpPlugun);
 <div v-webp:bg="require('static/home_top_bg.png')"></div>
 ```
 
-#### tips
-1. 使用require引用图片资源， 这样，vue-loader可以处理它
-2. 我这边没有使用webpack对插件进行babel转码，请将本插件添加到babel-loader处理的文件序列中
+
 
 #### resources
 1. [A new image format for the Web](https://developers.google.com/speed/webp/)
